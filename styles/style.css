@@ -1,0 +1,150 @@
+/**VARIABLES**/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+.navLinks {
+  list-style: none;
+}
+
+a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  background-color: lightblue;
+}
+
+.navBar {
+  background-color: rgba(101, 60, 114, 0.533);
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: white;
+}
+
+.logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  margin-left: 10rem;
+}
+
+.navLinks {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navLinks li {
+  margin-right: 5rem;
+}
+
+/*Burguer*/
+/*Step2*/
+.burguer {
+  padding: 0rem 1rem;
+  display: none;
+}
+
+.burguer div {
+  width: 25px;
+  height: 2.5px;
+  background-color: white;
+  margin: 5px;
+}
+
+/*Step3*/
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .logo {
+    text-align: center;
+    margin: auto;
+  }
+  .navLinks {
+    position: absolute;
+    height: 90vh;
+    top: 10vh;
+    right: 0px;
+    background: rgba(101, 60, 114, 0.533);
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    /*move it of the screen*/
+    -webkit-transition: -webkit-transform 0.4s ease-in;
+    transition: -webkit-transform 0.4s ease-in;
+    transition: transform 0.4s ease-in;
+    transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  }
+  .burguer {
+    display: block;
+    cursor: pointer;
+  }
+  .navActive {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    /*Move to original position*/
+  }
+  /*Lines after clicking*/
+  .x .line1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .x .line2 {
+    opacity: 0;
+  }
+  .x .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,72 @@
+
+
+/*Step3*/
+@media screen and (max-width: 768px){
+
+    body{
+
+        overflow-x: hidden;
+    }
+
+    .logo{
+
+        text-align: center;
+        margin: auto;
+    }
+
+    /**Repositioning the nav vertically*/
+    .navLinks{
+        position: absolute;
+        height: 90vh;
+        top: 10vh;
+        right: 0px;
+        background: $mainColor;
+        width: 40%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        transform: translateX(100%); /*move it of the screen*/
+
+        transition: transform 0.4s ease-in;
+       
+    }
+
+    .burguer{
+
+        display: block;
+        cursor: pointer;
+    }
+
+    .navActive{
+
+        transform: translateX(0%); /*Move to original position*/
+    }
+
+    
+    /*Lines after clicking*/
+   
+     .x .line1{
+
+        transform: rotate(-45deg) translate(-5px,6px);
+    
+       }
+
+     .x .line2{
+    
+        opacity: 0;
+    
+       }
+
+     .x .line3{
+    
+        transform: rotate(45deg) translate(-5px,-6px);
+    
+       }
+    
+  
+}
+
+
+
